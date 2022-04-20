@@ -18,8 +18,8 @@ public static void main(String[] args) throws InterruptedException {
 		   
 	    driver.get("https://www.flipkart.com/");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//input[@class='_2IX_2- VJZDxU']")).sendKeys("8610271604");
-		driver.findElement(By.xpath("//input[@class='_2IX_2- _3mctLh VJZDxU']")).sendKeys("Selva0320@");
+		driver.findElement(By.xpath("//input[@class='_2IX_2- VJZDxU']")).sendKeys("your username");
+		driver.findElement(By.xpath("//input[@class='_2IX_2- _3mctLh VJZDxU']")).sendKeys("your pass");
 		   
 	    WebElement w1=driver.findElement(By.xpath("//div[@class='_36HLxm col col-3-5']"));
 		WebElement w2=driver.findElement(By.xpath("//button[@class='_2KpZ6l _2HKlqd _3AWRsL']"));
@@ -53,7 +53,6 @@ public static void main(String[] args) throws InterruptedException {
        
        //Reset search box and search for realme mobile
        WebElement search = driver.findElement(By.name("q"));
-       String ctrlA = Keys.chord(Keys.CONTROL, "a");
        act.click(search).pause(100)
        	.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
        	.sendKeys(Keys.BACK_SPACE).sendKeys("Realme"+Keys.ENTER).build().perform();
@@ -111,7 +110,7 @@ public static void main(String[] args) throws InterruptedException {
        
        // click logout on hover menu
        WebElement logout = driver.findElement(By.xpath("//div[contains(text(),'Logout')]"));
-       //act.moveToElement(logout).click().perform();
+       act.moveToElement(logout).click().perform();
       
 	}
 }
